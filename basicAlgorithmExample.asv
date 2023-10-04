@@ -13,7 +13,6 @@ ylabel('Sepal width');
 %linear discriminator setup 
 lda = fitcdiscr(meas(:,1:2),species);
 
-%predict the data that we trained on 
 ldaClass = resubPredict(lda);
 
 %get the error on the training set
