@@ -1,0 +1,16 @@
+%Load neural network 
+net = googlenet
+
+%Look at appropriate input size 
+inputSize = net.Layers(1).InputSize
+
+%examine the types of outputs 
+%so look at the last layer class names 
+classNames = net.Layers(end).ClassNames;
+%get # of items, binary output 
+numClasses = numel(classNames);
+%get 10 random classes for output 
+disp(classNames(randperm(numClasses,10)))
+
+%import a picture that i want
+x 
